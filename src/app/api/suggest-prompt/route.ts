@@ -41,7 +41,7 @@ Each suggestion should be 1-2 sentences, descriptive and visually rich.`;
       let suggestions: string[] = [];
       try {
         // Extract JSON array from response
-        const jsonMatch = text.match(/\[.*\]/s);
+        const jsonMatch = text.match(/\[[\s\S]*\]/);
         if (jsonMatch) {
           suggestions = JSON.parse(jsonMatch[0]);
         } else {
