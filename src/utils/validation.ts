@@ -9,7 +9,7 @@ export const generateWallpaperSchema = z.object({
   mood: z.string().optional(),
   style: z.string().optional(),
   aspect: z.enum(["16:9", "9:16", "21:9"], {
-    required_error: "Aspect ratio is required",
+    message: "Aspect ratio is required",
   }),
 });
 
