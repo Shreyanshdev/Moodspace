@@ -66,4 +66,6 @@ export const { auth, handlers, signIn, signOut } = NextAuth({
   },
   pages: { signIn: "/" },
   secret: process.env.NEXTAUTH_SECRET,
+  // Explicitly set the base URL for production
+  trustHost: true,
 });
